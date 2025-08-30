@@ -11,7 +11,7 @@ const historyLog = document.getElementById('history-log');
 // Variables for swipe gesture
 let touchStartX = 0;
 let touchEndX = 0;
-const swipeThreshold = 50; // Minimum pixels to qualify as a swipe
+const swipeThreshold = 50;
 
 // Add event listeners for touch gestures
 display.addEventListener('touchstart', (e) => {
@@ -24,7 +24,6 @@ display.addEventListener('touchend', (e) => {
 });
 
 function handleSwipeGesture() {
-    // Detect a swipe from right to left
     if (touchEndX < touchStartX - swipeThreshold) {
         backspace();
     }
@@ -37,7 +36,6 @@ function backspace() {
             expression = '0';
             displayValue = '0';
         } else {
-            // Update the displayValue based on the new expression
             const parts = expression.split(/[\+\-\*\/]/);
             displayValue = parts[parts.length - 1].trim();
         }

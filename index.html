@@ -7,11 +7,23 @@
     <title>Calculator App</title>
 </head>
 <body>
-    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <div class="calculator">
+    <p id="swipe-message" class="mobile-message">Swipe left to erase</p>
     <div class="display" id="display">0</div>
     <div class="buttons">
         <button class="btn misc" onclick="clearDisplay()">AC</button>
+        <button class="btn backspace-btn" onclick="backspace()">&larr;</button>
         <button class="btn misc" onclick="toggleSign()">+/-</button>
         <button class="btn misc" onclick="calculatePercentage()">%</button>
         <button class="btn operator" onclick="appendOperator('/')">&divide;</button>
@@ -39,7 +51,6 @@
 </div>
 
 <script src="script.js"></script>
-
 
 </body>
 </html>
